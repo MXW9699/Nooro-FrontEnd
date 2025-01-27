@@ -1,0 +1,1 @@
+export const LIST_OF_COLORS: string[] = ['yellow','red','green','blue', 'pink', 'brown', 'purple'];

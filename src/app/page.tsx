@@ -1,34 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TaskView } from "./Components/tasksView";
+
 
 export default function Home() {
-  return (
-    <div className="flex justify-center" >
-        <Link className="bg-buttonBlue" href="/createTask">
-          <span className = "w-[736] h-[52] flex justify-center items-center">
-          Create Task 
-          <Image
-            aria-hidden
-            src="/plus.svg"
-            alt="plus icon"
-            width={16}
-            height={16}
-            />
-            </span>
-        </Link>
 
-        <Link className="bg-buttonBlue" href="/editTask/task123">
-          <span className = "w-[736] h-[52] flex justify-center items-center">
-          Edit Task 
+  return (
+    <div className="flex-row justify-center items-center">
+      <Link className="w-[736] h-[52] flex justify-center items-center bg-buttonBlue" href="/createTask">
+          Create Task
           <Image
             aria-hidden
             src="/plus.svg"
             alt="plus icon"
             width={16}
             height={16}
-            />
-            </span>
-        </Link>
+          />
+      </Link>
+      <TaskView/>
     </div>
   );
 }
