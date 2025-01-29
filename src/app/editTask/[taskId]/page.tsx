@@ -1,6 +1,5 @@
 "use client";
 import { ColorChoices } from "@/app/Components/colorChoices";
-import { LIST_OF_COLORS } from "@/app/Constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,7 +9,7 @@ import { Task } from "@/app/types";
 export default function Page() {
   const { taskId } = useParams();
   const [title, setTitle] = useState<string>("");
-  const [color, setColor] = useState<string>(LIST_OF_COLORS[0]);
+  const [color, setColor] = useState<string>("");
   const [saved, setSaved] = useState(true);
 
   async function getTask() {
@@ -52,6 +51,7 @@ export default function Page() {
             setTitle(e.target.value);
             setSaved(false);
           }}
+          maxLength={191}
         />
       </div>
       <div className="flex flex-col">

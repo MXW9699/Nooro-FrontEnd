@@ -43,16 +43,17 @@ export function TaskCard({ task, getTasks }: { task: Task; getTasks: () => void}
   }
 
   return (
-    <Link className='flex justify-between w-full'key={task.id} href={`/editTask/${task.id}`}>
+    <Link className='m-1 flex justify-between max-w-[736] h-[72] items-center bg-secondary'key={task.id} href={`/editTask/${task.id}`}>
       <div className="flex">
       <input
+      className="m-2"
         type="checkbox"
         readOnly
         checked={completed}
         onClick={toggle}
       ></input>
-      <p className={completed ? "line-through" : ""}>
-      {task.title}</p>
+      <div className={`overflow-ellipsis { completed ? "line-through text-gray-500" : "text-gray-200"}`}>
+      {task.title}</div>
       </div>
       <Image
         src="/trash.svg"

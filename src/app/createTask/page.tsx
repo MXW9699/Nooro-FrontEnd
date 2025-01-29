@@ -4,11 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { ColorChoices } from "../Components/colorChoices";
 import { useRouter } from "next/navigation";
-import { LIST_OF_COLORS } from "../Constants";
 
-export default function Home() {
+export default function Page() {
   const [title, setTitle] = useState("");
-  const [color, setColor] = useState(LIST_OF_COLORS[0]);
+  const [color, setColor] = useState('red');
   const router = useRouter();
 
   async function onSubmit() {
@@ -33,19 +32,19 @@ export default function Home() {
           height={24}
         ></Image>
       </Link>
-      <div className="flex flex-col">
+      <div className="p-0 flex flex-col">
         Title
         <input
           className="text-black"
           type="text"
           onChange={(e) => setTitle(e.target.value)}
+          maxLength={191}
         />
-        <div className="flex flex-col"></div>
+        <div className="p-0 flex flex-col"></div>
         Color
         <ColorChoices setColor={setColor} />
       </div>
-      <button className="bg-buttonBlue" onClick={onSubmit}>
-        {" "}
+      <button className="p-0 flex w-full justify-center items-center bg-buttonBlue" onClick={onSubmit}>
         Add Task <Image src="/plus.svg" alt="plus" width={16} height={16} />
       </button>
     </div>

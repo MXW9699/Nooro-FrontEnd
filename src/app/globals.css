@@ -4,10 +4,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1A1A1A;
+  --foreground: #262626;
   --buttonBlue: #1E6F9F;
   --textPurple: #5E60CE;
   --textBlue: #4EA8DE;
+  --secondary: #262626;
 }
 
 @media (prefers-color-scheme: dark) {

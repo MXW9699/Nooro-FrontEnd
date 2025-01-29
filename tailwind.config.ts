@@ -13,7 +13,8 @@ export default {
         foreground: "var(--foreground)",
         buttonBlue: "var(--buttonBlue)",
         textPurple: "var(--textPurple)",
-        textBlue: "var(--textBlue)"
+        textBlue: "var(--textBlue)",
+        secondary: "var(--secondary)"
       },
     },
   },
